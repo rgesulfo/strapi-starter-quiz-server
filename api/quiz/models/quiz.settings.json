@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quizzes",
+  "info": {
+    "name": "Quiz",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "tech"
+      ],
+      "default": "tech",
+      "enumName": "category"
+    },
+    "questions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "default.question"
+    }
+  }
+}
